@@ -25,13 +25,14 @@ The project uses the TMDB 5000 Movies dataset with the following files:
 ### Prerequisites
 - Python 3.7+
 - pip package manager
+- TMDB 5000 Movies CSV files (download from Kaggle)
 
 ### Setup
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/yourusername/movie-recommendation-system.git
-cd movie-recommendation-system
+git clone https://github.com/aaryanrathod/Movie-Recommendation.git
+cd Movie-Recommendation
 ```
 
 2. Install required dependencies:
@@ -39,9 +40,17 @@ cd movie-recommendation-system
 pip install -r requirements.txt
 ```
 
-3. Place the datasets in the project directory:
+3. Download and place the datasets in the project directory:
    - `tmdb_5000_movies.csv`
    - `tmdb_5000_credits.csv`
+   
+   Download from: https://www.kaggle.com/tmdb/tmdb-movie-metadata
+
+4. **Generate the pickle files (IMPORTANT)**:
+```bash
+python recommendation_system.py
+```
+This creates `movies_dict.pkl` and `similarity.pkl` which are required by the web app.
 
 ## Usage
 

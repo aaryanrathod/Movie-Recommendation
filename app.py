@@ -194,8 +194,31 @@ else:
     # Show error message if data is not loaded
     st.error("❌ Cannot load the movie recommendation system.")
     st.info("""
+    ### Setup Required
+    
     To use this app, you need to:
-    1. Run the `recommendation_system.py` script first
-    2. This will generate the required pickle files
-    3. Then restart the Streamlit app
+    
+    1. **Download the datasets** from Kaggle:
+       - `tmdb_5000_movies.csv`
+       - `tmdb_5000_credits.csv`
+       - Download from: https://www.kaggle.com/tmdb/tmdb-movie-metadata
+    
+    2. **Place CSV files** in the same directory as this app
+    
+    3. **Run the recommendation system**:
+       ```bash
+       python recommendation_system.py
+       ```
+       This generates the required pickle files:
+       - `movies_dict.pkl`
+       - `similarity.pkl`
+    
+    4. **Restart the Streamlit app**:
+       ```bash
+       streamlit run app.py
+       ```
+    
+    **Note:** Step 3 takes 3-5 minutes on first run. The pickle files are generated only once.
+    
+    For more help, see [DEPLOYMENT.md](DEPLOYMENT.md) or [QUICKSTART.md](QUICKSTART.md)
     """)
